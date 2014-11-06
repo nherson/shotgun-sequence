@@ -1,0 +1,4 @@
+compare() {
+  num=$1
+  diff <(cat data/reads${num}.txt | python code/shotgun-sequence.py) <(cat data/answer${num}.txt)
+}
