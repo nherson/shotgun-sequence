@@ -9,7 +9,7 @@ do
     echo Running on reads${i}.txt...
     $* < reads${i}.txt > output${i}.txt
     echo Comparing your output${i}.txt to the correct answer....
-    cmp output${i}.txt answer${i}.txt && echo output${i}.txt looks good
+    cmp output${i}.txt answer${i}.txt && echo output${i}.txt looks good || echo "FAILURE"
 done
 
 for i in 6 7 8 9 10 11 12 13 14 15 16
